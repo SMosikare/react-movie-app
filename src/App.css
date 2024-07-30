@@ -1,0 +1,70 @@
+.app {
+  padding: 40px 120px;
+}
+
+.app .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app h1 {
+  font-size: 3rem;
+  font-family: var(--font-roboto);
+  letter-spacing: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(225, 0, 0, 0.6),
+    var(--color-accent),
+    rgba(225, 0, 0, 0.6)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.app .search-bar {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+  border-radius: 50px;
+  box-shadow: 2px 4px 10px rgb(51, 51, 51);
+}
+
+.app .search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  color: var(--color-text);
+  background-color: transparent;
+  padding: 20px 20px 20px 30px;
+}
+
+.app .search-input::placeholder {
+  color: var(--color-text);
+}
+
+.app .search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.app .search-icon {
+  height: 38px;
+  margin: 4px 20px 0 0;
+}
+
+@media (max-width: 900px) {
+  .app {
+    padding: 60px 20px;
+  }
+
+  .app .header {
+    flex-direction: column;
+    row-gap: 40px;
+  }
+}

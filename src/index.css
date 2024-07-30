@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto+Slab:wght@100..900&display=swap");
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto Slab", serif;
+
+  --color-text: rgba(255, 255, 255, 0.6);
+  --color-accent: rgb(255, 0, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(38, 38, 38);
+  font-family: var(--font-poppins);
+}
