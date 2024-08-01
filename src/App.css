@@ -58,6 +58,80 @@
   margin: 4px 20px 0 0;
 }
 
+.app .movie-container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.movie-card {
+  position: relative;
+  display: inline-block;
+  height: 400px;
+  transition: var(--transition);
+}
+
+.movie-card:hover {
+  transform: scale(1.08);
+}
+
+.movie-card .poster {
+  height: 100%;
+  border-radius: 6px;
+}
+
+.movie-card .poster-shadow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.6) 80%
+  );
+
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.movie-card:hover .poster-shadow {
+  background: transparent;
+}
+
+.movie-card .type {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  background-color: var(--color-accent);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-inline: 4px;
+  transition: var(--transition);
+}
+
+.movie-card .info {
+  position: absolute;
+  bottom: 12px;
+  left: 16px;
+  transition: var(--transition);
+}
+
+.movie-card .year {
+  color: var(--color-accent);
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.movie-card:hover .type,
+.movie-card:hover .info {
+  opacity: 0;
+}
+
 @media (max-width: 900px) {
   .app {
     padding: 60px 20px;
@@ -66,5 +140,9 @@
   .app .header {
     flex-direction: column;
     row-gap: 40px;
+  }
+
+  .app .search-bar {
+    width: 90%;
   }
 }
