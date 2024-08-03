@@ -63,13 +63,21 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 3rem;
+}
+
+.app .no-movie-matches {
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--font-roboto);
+  padding-top: 120px;
 }
 
 .movie-card {
   position: relative;
   display: inline-block;
   height: 400px;
+  width: 280px;
   transition: var(--transition);
 }
 
@@ -79,7 +87,9 @@
 
 .movie-card .poster {
   height: 100%;
+  width: 100%;
   border-radius: 6px;
+  object-fit: cover;
 }
 
 .movie-card .poster-shadow {
@@ -90,8 +100,8 @@
   right: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.6) 80%
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.9) 100%
   );
 
   border-radius: 6px;
@@ -110,6 +120,7 @@
   color: rgb(0, 0, 0);
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
   padding-inline: 4px;
   transition: var(--transition);
 }
@@ -118,18 +129,19 @@
   position: absolute;
   bottom: 12px;
   left: 16px;
+  right: 16px;
   transition: var(--transition);
+}
+
+.movie-card:hover .type,
+.movie-card:hover .info {
+  opacity: 0;
 }
 
 .movie-card .year {
   color: var(--color-accent);
   font-weight: 500;
   margin-top: 6px;
-}
-
-.movie-card:hover .type,
-.movie-card:hover .info {
-  opacity: 0;
 }
 
 @media (max-width: 900px) {
@@ -143,6 +155,6 @@
   }
 
   .app .search-bar {
-    width: 90%;
+    width: 80%;
   }
 }
